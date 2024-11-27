@@ -1,0 +1,99 @@
+.App {
+  text-align: center;
+  background-color: rgb(64, 63, 63);
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main_heading{
+  padding-top: 20px;
+  font-size: 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.string_box{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px;
+  
+}
+.string{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid white;
+}
+.inc_length,.dec_length,.generate_passward{
+  border: 4px solid rgb(0, 0, 0);
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-size: 15px;
+ font-weight: bold;
+  margin: 10px;
+  height: 40px;
+  width: 200px;
+}
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  padding-left: 35px; /* Space for the custom checkbox */
+  user-select: none;  /* Prevent text selection */
+  margin: 10px;
+}
+
+/* Hide the default checkbox */
+.custom-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  
+}
+
+/* Create custom checkmark */
+.custom-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #ccc;
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.2s;
+}
+
+/* Hover effect */
+.custom-checkbox:hover input[type="checkbox"] ~ .checkmark {
+  background-color: #b0b0b0;
+}
+
+/* Style checkmark when checked */
+.custom-checkbox input[type="checkbox"]:checked ~ .checkmark {
+  background-color: #4caf50;
+}
+
+/* Add a check icon inside the custom checkbox */
+.custom-checkbox .checkmark::after {
+  content: '';
+  position: absolute;
+  display: none;
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Show the check icon when checked */
+.custom-checkbox input[type="checkbox"]:checked ~ .checkmark::after {
+  display: block;
+}
